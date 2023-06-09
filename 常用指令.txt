@@ -1,0 +1,20 @@
+﻿ls -ltrh /dev/video*  #攝影機位置
+
+python3 face_track_yolov4_Noarduino.py --rtsp rtsp://Admin:1234@192.168.1.110:554/stream1 -m yolov4-tiny-3l-face-320x320   #RTSP
+
+python3 face_track_image.py --usb 0  -m yolov4-tiny-3l-face-320x320 #video
+
+python3 face_track_image.py --video test/test1.mp4 -m yolov4-tiny-3l-face-320x320 #video
+
+python3 face_track_image.py --image test/face_test.jpg -m yolov4-tiny-3l-face-320x320 #imaage
+
+python3 face_track_yolov4.py --usb 0  -m yolov4-tiny-3l-face-320x320 --open_image_process 0  --arduino_serial 1  --show_window 1 ##open_usb cam
+python3 face_track_yolov4.py --rtsp rtsp://Admin:1234@192.168.1.110:554/stream1 -m yolov4-tiny-3l-face-320x320 --open_image_process 0  --arduino_serial 1  --show_window 1 ##open_RTSP
+
+
+
+  
+
+
+
+
